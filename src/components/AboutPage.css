@@ -1,0 +1,86 @@
+.about {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.about-intro {
+  margin-bottom: 18px;
+}
+
+.about-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-1);
+  letter-spacing: 0.04em;
+}
+
+.about-sub {
+  font-size: 11px;
+  color: var(--text-4);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+}
+
+.about-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-card {
+  background: var(--bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 11px;
+  padding: 15px;
+}
+
+.about-card-label {
+  margin-bottom: 8px;
+}
+
+.about-card-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.75;
+  color: var(--text-3);
+  letter-spacing: 0.01em;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.about-stat {
+  background: var(--bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 11px;
+  padding: 15px;
+  text-align: center;
+}
+
+.about-stat-value {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--lime);
+  letter-spacing: 0.04em;
+}
+
+.about-stat-value--sm {
+  font-size: 24px;
+}
+
+.about-stat .eyebrow {
+  margin-top: 5px;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+
+@media (max-width: 700px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+}

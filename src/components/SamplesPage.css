@@ -1,0 +1,109 @@
+.samples {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.samples-intro {
+  margin-bottom: 14px;
+}
+
+.samples-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-1);
+  letter-spacing: 0.02em;
+}
+
+.samples-sub {
+  font-size: 11px;
+  color: var(--text-4);
+  margin-top: 4px;
+  line-height: 1.6;
+}
+
+.samples-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.sample-card {
+  background: var(--bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sample-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sample-card-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 3px 7px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.sample-card-ext {
+  font-family: var(--font-code);
+  font-size: 10px;
+  color: var(--text-5);
+  margin-left: auto;
+}
+
+.sample-card-preview {
+  flex: 1;
+  padding: 10px 12px;
+  background: var(--bg-deep);
+  font-family: var(--font-code);
+  font-size: 11px;
+  color: #50505e;
+  white-space: pre;
+  line-height: 1.75;
+  overflow: hidden;
+  min-height: 72px;
+}
+
+.sample-card-foot {
+  padding: 9px 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sample-card-load {
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 5px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #f0f0f0;
+  font-family: var(--font-ui);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.sample-card-load:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+@media (max-width: 700px) {
+  .samples-grid {
+    grid-template-columns: 1fr;
+  }
+}

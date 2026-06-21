@@ -1,0 +1,86 @@
+.analyzing-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  background: rgba(6, 6, 9, 0.86);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: analyzing-fade-in 0.15s ease;
+}
+
+@keyframes analyzing-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.analyzing-scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.03) 0px,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+}
+
+.analyzing-term {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  padding: 18px 22px;
+  font-family: var(--font-code);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.analyzing-line {
+  color: var(--lime);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: analyzing-type 0.18s steps(20, end);
+}
+
+.analyzing-prompt {
+  color: var(--text-4);
+  margin-right: 6px;
+}
+
+@keyframes analyzing-type {
+  from {
+    opacity: 0;
+    transform: translateX(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.analyzing-cursor-row {
+  display: flex;
+  align-items: center;
+}
+
+.analyzing-cursor {
+  width: 7px;
+  height: 13px;
+  margin-left: 6px;
+  background: var(--lime);
+  animation: blink-dot 0.9s steps(2, jump-none) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .analyzing-line,
+  .analyzing-overlay {
+    animation: none;
+  }
+}

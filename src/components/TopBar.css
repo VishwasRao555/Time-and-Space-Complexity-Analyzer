@@ -1,0 +1,116 @@
+.topbar {
+  grid-column: 1 / 3;
+  display: flex;
+  align-items: center;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.topbar-stat {
+  padding: 15px 24px;
+  flex-shrink: 0;
+}
+
+.topbar-value {
+  font-family: var(--font-code);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text-1);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.topbar-value--time {
+  color: var(--accent-time);
+}
+
+.topbar-value--space {
+  color: var(--accent-space);
+}
+
+@keyframes stat-flash-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.stat-flash {
+  animation: stat-flash-in 0.28s ease;
+}
+
+.topbar-parser {
+  font-size: 13px;
+  font-weight: 500;
+  color: #68687a;
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+}
+
+.topbar-divider {
+  width: 1px;
+  align-self: stretch;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.topbar-analyze {
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+  align-self: stretch;
+  padding: 0 26px;
+  background: var(--mono-cream);
+  color: #0a0a0a;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.15s, transform 0.08s;
+  position: relative;
+  overflow: hidden;
+}
+
+.topbar-analyze:hover {
+  background: #ffffff;
+}
+
+.topbar-analyze:active {
+  transform: scale(0.98);
+}
+
+.topbar-analyze.is-analyzing {
+  cursor: progress;
+  background: #c9c9c9;
+}
+
+.topbar-analyze.is-analyzing::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(0, 0, 0, 0.28) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: analyze-sweep 0.7s linear infinite;
+}
+
+@keyframes analyze-sweep {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}

@@ -1,0 +1,105 @@
+:root {
+  /* monochrome black & white theme */
+  --bg-page: #0a0a0a;
+  --bg-shell: #0e0e0e;
+  --bg-panel: #151515;
+  --bg-editor: #0b0b0b;
+  --bg-editor-head: #0f0f0f;
+  --bg-gutter: #080808;
+  --bg-deep: #090909;
+
+  --text-1: #f3f3f3;
+  --text-2: #cfcfcf;
+  --text-3: #8c8c8c;
+  --text-4: #5a5a5a;
+  --text-5: #3a3a3a;
+
+  /* "accent" is now white so existing var(--lime) usages render mono */
+  --lime: #f4f4f4;
+  --blue: #f0f0f0;
+  --blue-text: #1a1a1a;
+  --red: #9a9a9a;
+
+  /* a few intentional color pops on the otherwise B&W theme */
+  --accent-green: #43d17a;
+  --accent-graph: #5fd06a;
+  --accent-time: #5fd06a;
+  --accent-space: #5b9eff;
+
+  /* monochrome landing palette */
+  --mono-bg: #060606;
+  --mono-bg-2: #101010;
+  --mono-deep: #000000;
+  --mono-card: #f4f4f4;
+  --mono-card-edge: #d9d9d9;
+  --mono-ink: #111111;
+  --mono-cream: #fafafa;
+
+  --font-ui: "IBM Plex Mono", monospace;
+  --font-code: "JetBrains Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-page);
+  color: var(--text-1);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+a {
+  color: var(--blue-text);
+}
+
+button {
+  font-family: var(--font-ui);
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-1);
+}
+
+@keyframes blink-dot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+}
+
+.scroll-thin::-webkit-scrollbar {
+  width: 4px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+}
+
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-4);
+}
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}

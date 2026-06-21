@@ -1,0 +1,95 @@
+.cheatsheet {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.cheatsheet-intro {
+  margin-bottom: 14px;
+}
+
+.cheatsheet-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-1);
+  letter-spacing: 0.02em;
+}
+
+.cheatsheet-sub {
+  font-size: 11px;
+  color: var(--text-4);
+  margin-top: 4px;
+  line-height: 1.6;
+}
+
+.cheatsheet-head-row,
+.cheatsheet-row {
+  display: grid;
+  grid-template-columns: 88px 108px 1fr 72px;
+  gap: 0;
+  align-items: center;
+}
+
+.cheatsheet-head-row {
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cheatsheet-head-row .eyebrow {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--text-5);
+}
+
+.cheatsheet-row {
+  padding: 12px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.cheatsheet-notation {
+  font-family: var(--font-code);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.cheatsheet-class {
+  font-size: 12px;
+  font-weight: 600;
+  color: #a0a0b0;
+  letter-spacing: 0.02em;
+}
+
+.cheatsheet-example {
+  font-size: 11px;
+  color: #505060;
+  line-height: 1.5;
+  padding-right: 12px;
+}
+
+.cheatsheet-bar-track {
+  width: 58px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.cheatsheet-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+@media (max-width: 700px) {
+  .cheatsheet-head-row,
+  .cheatsheet-row {
+    grid-template-columns: 72px 1fr 50px;
+  }
+  .cheatsheet-example {
+    display: none;
+  }
+  .cheatsheet-head-row .eyebrow:nth-child(3) {
+    display: none;
+  }
+}

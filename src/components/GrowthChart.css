@@ -1,0 +1,28 @@
+.growth-chart {
+  background: var(--bg-panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 11px 11px 6px;
+  flex-shrink: 0;
+}
+
+.growth-chart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.growth-chart-time {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--lime);
+  letter-spacing: 0.04em;
+}
+
+.growth-chart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
