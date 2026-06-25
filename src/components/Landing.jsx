@@ -127,6 +127,17 @@ export default function Landing({ onLaunch }) {
               <span className="hero-launch-arrow">→</span>
             </button>
             <div className="cta-foot">Time and Space Complexity Analyzer — v1.0</div>
+
+            <div className="landing-author">
+              <div className="landing-author-rule" />
+              <div className="eyebrow landing-author-label">// CRAFTED BY</div>
+              <div className="landing-author-name">VISHWAS RAO CH</div>
+              <div className="landing-author-tag">
+                <span className="landing-author-bracket">&lt;</span>
+                Engineer · Builder · Analyst
+                <span className="landing-author-bracket">/&gt;</span>
+              </div>
+            </div>
           </Reveal>
         </section>
       </div>
