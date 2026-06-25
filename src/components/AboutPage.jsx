@@ -50,6 +50,17 @@ export default function AboutPage() {
             <div className="eyebrow">Browser</div>
           </div>
         </div>
+
+        <div className="about-author">
+          <div className="about-author-rule" />
+          <div className="eyebrow about-author-label">// CRAFTED BY</div>
+          <div className="about-author-name">VISHWAS RAO CH</div>
+          <div className="about-author-tag">
+            <span className="about-author-bracket">&lt;</span>
+            Engineer · Builder · Analyst
+            <span className="about-author-bracket">/&gt;</span>
+          </div>
+        </div>
       </div>
     </div>
   );
